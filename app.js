@@ -20,8 +20,14 @@ app.use((req, res, next) => {
   next();
 });
 
+const getRecentUsers = () => {
+  const cutoff = daysAgo(RECENT_DAYS);
+  return users.filter((u) => u.lastAccessDate >= cutoff);
+};
+
+// Root returns the filtered users (accessed within the last 10 days)
 app.get('/', (req, res) => {
-  res.send(`users: ${users.map((u) => u.username).join(' ')}`);
+  res.send(`users: ${getRecentUsers().map((u) => u.username).join(' ')}`);
 });
 
 app.get('/users', (req, res) => {
@@ -30,8 +36,7 @@ app.get('/users', (req, res) => {
 
 // Users who accessed the system within the last 10 days
 app.get('/users/recent', (req, res) => {
-  const cutoff = daysAgo(RECENT_DAYS);
-  res.json(users.filter((u) => u.lastAccessDate >= cutoff));
+  res.json(getRecentUsers());
 });
 
 app.use((req, res) => {
