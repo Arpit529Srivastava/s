@@ -1,0 +1,12 @@
+{
+  "name": "express-last-access",
+  "version": "1.0.0",
+  "description": "Express.js API that tracks users by last access date",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
