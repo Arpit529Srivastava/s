@@ -1,0 +1,12 @@
+{
+  "name": "car-inventory-api",
+  "version": "1.0.0",
+  "description": "RESTful Express.js API for a car dealership inventory",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
