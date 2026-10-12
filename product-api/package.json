@@ -1,0 +1,13 @@
+{
+  "name": "product-api",
+  "version": "1.0.0",
+  "description": "Express.js service using Mongoose to add and list clothing store products",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  }
+}
