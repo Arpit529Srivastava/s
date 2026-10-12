@@ -1,0 +1,14 @@
+{
+  "name": "order-logging-api",
+  "version": "1.0.0",
+  "description": "Express.js order API demonstrating structured logging with Morgan and Winston",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "winston": "^3.13.0"
+  }
+}
