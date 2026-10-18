@@ -1,0 +1,13 @@
+{
+  "name": "jwt-auth-api",
+  "version": "1.0.0",
+  "description": "Express.js API with JWT-protected movie routes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
