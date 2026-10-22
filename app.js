@@ -21,8 +21,10 @@ app.use((req, res, next) => {
 });
 
 const getRecentUsers = () => {
-  const cutoff = daysAgo(RECENT_DAYS);
-  return users.filter((u) => u.lastAccessDate >= cutoff);
+  const now = Date.now();
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  // Day-based comparison so a user accessed exactly 10 days ago is included
+  return users.filter((u) => Math.floor((now - u.lastAccessDate.getTime()) / DAY_MS) <= RECENT_DAYS);
 };
 
 // Root returns the filtered users (accessed within the last 10 days)
